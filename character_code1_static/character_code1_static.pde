@@ -3,73 +3,70 @@ int axis = 480;
 int x = 450;
 int y = 140;
 
-void setup() {
 size(960,600);
-}
-
-void draw() { 
-background(250,200,200);
 noStroke();
+background(250,200,200);
+
 fill(0,0,0);
-ellipse(mouseX,mouseY,180,180);
+ellipse(axis,370,180,180);
 
 //ears
 noStroke();
 fill(0);
-ellipse(mouseX-75,mouseY-180,45,45);
-ellipse(mouseX+75,mouseY-180,45,45);
+ellipse(405,190,45,45);
+ellipse(555,190,45,45);
 
 //face
 fill(255,255,255);
-ellipse(mouseX,mouseY-120,Radius*2,Radius*2);
-ellipse(mouseX,mouseY-90,200,140);
+ellipse(axis,250,Radius*2,Radius*2);
+ellipse(axis,280,200,140);
 
 //crown
 fill(255,250,150);
 beginShape();
-vertex(mouseX-30,mouseY-230+40);
-vertex(mouseX-30,mouseY-230);
-vertex(mouseX-30+17,mouseY-230+20);
-vertex(mouseX,mouseY-230-10);
-vertex(mouseX-30+43,mouseY-230+20);
-vertex(mouseX-30+60,mouseY-230);
-vertex(mouseX-30+60,mouseY-230+40);
+vertex(x,y+40);
+vertex(x,y);
+vertex(x+17,y+20);
+vertex(axis,y-10);
+vertex(x+43,y+20);
+vertex(x+60,y);
+vertex(x+60,y+40);
 endShape();
-arc(mouseX,mouseY-230+35,60,40,0,PI);
+arc(axis,y+35,60,40,0,PI);
 
 
 
 
 //body
 fill(255,255,255);
-rect(mouseX-90,mouseY,180,40);
-ellipse(mouseX,mouseY+40,180,100);
+rect(390,370,180,40);
+ellipse(axis,410,180,100);
 fill(0);
-ellipse(mouseX,mouseY,180,35);
+ellipse(axis,370,180,35);
 
 
 //feet
-ellipse(mouseX-40,mouseY+70,60,60);
-ellipse(mouseX+40,mouseY+70,60,60);
+ellipse(440,440,60,60);
+ellipse(520,440,60,60);
 noFill();
 stroke(60);
 strokeWeight(26);
-ellipse(mouseX-40,mouseY+78,25,25);
-ellipse(mouseX+40,mouseY+78,25,25);
+ellipse(440,448,25,25);
+ellipse(520,448,25,25);
 
 //mouth
 noStroke();
 fill(255,80,100);
-arc(mouseX, mouseY-60, 30, 60, -0.15, PI, CHORD);
+arc(axis, 310, 30, 60, -0.15, PI, CHORD);
 
 //nose
 stroke(100);
 strokeWeight(7);
 strokeJoin(ROUND);
-triangle(mouseX-5,mouseY-85,mouseX+5,mouseY-85,mouseX,mouseY-80);
+triangle(475,285,485,285,axis,290);
 
 //eyes
-translate(mouseX+40,mouseY-110);
+translate(520,260);
 rotate(radians(-25));
 noStroke();
 fill(0);
@@ -117,4 +114,7 @@ quad(60,0,60,80,50,80,50,0);
 fill(75,45,127);
 quad(50,0,50,80,40,80,40,0);
 
-}
+
+
+
+
