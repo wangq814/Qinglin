@@ -26,7 +26,7 @@ float r = 100;
 
 
 void setup(){
-  size(700,900,PDF,"planet.pdf");
+  //size(700,900,PDF,"planet.pdf");
   size(700,900);
   //noStroke();
     w = width;
@@ -41,7 +41,7 @@ void setup(){
 }
 
 void draw(){
-  if (frameCount < 20){
+  if (frameCount < 2000){
     stroke(255);
   float xnoise = 0;
   float ynoise = 0;
