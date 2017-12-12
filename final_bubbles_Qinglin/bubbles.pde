@@ -3,7 +3,7 @@ class Bubble {
   float accel;
   float vol;
   float move;
-  float xoff;
+  float xoff = 0;
   float n;
   float d = 50;
 
@@ -28,7 +28,7 @@ class Bubble {
       d = 50;
     }
     //if ((x<-1000) || (x>1000)) {
-     // x = 1000;
+    // x = 1000;
     //}
     vol += accel;
     xoff += 0.005;
@@ -36,7 +36,7 @@ class Bubble {
   }
 
   void display() {
-    
+
     pushMatrix();
     noStroke();
     translate(x + n, y, z);
@@ -44,12 +44,9 @@ class Bubble {
     sphere(d);
     popMatrix();
   }
-  
-  void pop(){
+
+  void pop() {
     d -= 25;
     
-    }
-    
-    
- 
+  }
 }
